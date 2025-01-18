@@ -172,20 +172,69 @@ export function Header() {
           </div>
         </div>
 
-        {/* Animated Progress Bar */}
-        <div className="h-0.5 bg-gray-100 relative">
+        {/* Animated Medical Progress Line */}
+        <div className="h-1 bg-gray-50 relative overflow-hidden">
+          {/* EKG Pattern */}
           <motion.div
-            className="absolute left-0 top-0 h-full bg-gradient-to-r from-[#5e5898] to-[#4a4578]"
+            className="absolute inset-y-0 w-[200%] left-0"
             animate={{
-              width: ['0%', '100%'],
-              x: ['-100%', '100%'],
+              x: [0, '-50%']
             }}
             transition={{
-              duration: 2,
+              duration: 4,
               repeat: Infinity,
-              ease: 'easeInOut',
+              ease: "linear"
             }}
-          />
+          >
+            <svg
+              className="h-full w-full"
+              preserveAspectRatio="none"
+              viewBox="0 0 800 2"
+            >
+              <path
+                d="M0 1 L160 1 L170 0 L180 2 L190 1 L200 1 L220 0 L240 2 L260 1 
+                   L400 1 L560 1 L570 0 L580 2 L590 1 L600 1 L620 0 L640 2 L660 1 L800 1"
+                strokeWidth="0.5"
+                className="stroke-[#5e5898] fill-none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M0 1 L160 1 L170 0 L180 2 L190 1 L200 1 L220 0 L240 2 L260 1 
+                   L400 1 L560 1 L570 0 L580 2 L590 1 L600 1 L620 0 L640 2 L660 1 L800 1"
+                strokeWidth="2"
+                className="stroke-[#5e5898]/20 fill-none blur-[2px]"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </motion.div>
+
+          {/* Glowing Dot */}
+          <motion.div
+            className="absolute top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-[#5e5898]"
+            animate={{
+              x: ['-100%', '100vw'],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              x: {
+                duration: 4,
+                repeat: Infinity,
+                ease: "linear",
+              },
+              scale: {
+                duration: 1,
+                repeat: Infinity,
+              }
+            }}
+          >
+            <div className="absolute inset-0 animate-ping bg-[#5e5898]/50 rounded-full" />
+          </motion.div>
+
+          {/* Gradient Overlays */}
+          <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white to-transparent z-10" />
+          <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white to-transparent z-10" />
         </div>
       </motion.header>
     </>
