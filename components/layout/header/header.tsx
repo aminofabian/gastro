@@ -28,7 +28,7 @@ export function Header() {
               </div>
               <div className="hidden sm:flex items-center">
                 <MapPin className="w-4 h-4 mr-2" />
-                <span>123 Medical Center Dr.</span>
+                <span>123 Gastro Liver Clinic Kenya.</span>
               </div>
             </div>
             <div className="flex items-center">
@@ -37,7 +37,7 @@ export function Header() {
                 className="flex items-center bg-white/10 rounded-full px-4 py-1"
               >
                 <Phone className="w-4 h-4 mr-2" />
-                <span className="font-medium">Emergency: (555) 123-4567</span>
+                <span className="font-medium">Emergency: (254) 0719 214991, 0797 463203</span>
               </motion.div>
             </div>
           </div>
