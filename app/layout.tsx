@@ -1,6 +1,6 @@
 import { Outfit } from 'next/font/google'
 import { Header } from '@/components/layout/header/header'
-import { Footer } from '@/components/layout/footer/page'
+import { Footer } from '@/components/layout/footer/footer'
 import './globals.css'
 import './styles/animations.css'
 
