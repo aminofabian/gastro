@@ -25,6 +25,9 @@ module.exports = {
           900: '#121115',
         },
       },
+      fontFamily: {
+        jost: ['var(--font-jost)', 'sans-serif'],
+      },
     },
   },
   plugins: [],

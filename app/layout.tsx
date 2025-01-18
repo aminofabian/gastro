@@ -1,12 +1,13 @@
-import { Outfit } from 'next/font/google'
+import { Jost } from 'next/font/google'
 import { Header } from '@/components/layout/header/header'
 import { Footer } from '@/components/layout/footer/footer'
 import './globals.css'
 import './styles/animations.css'
 
-const outfit = Outfit({
+const jost = Jost({
   subsets: ['latin'],
-  variable: '--font-outfit',
+  display: 'swap',
+  variable: '--font-jost',
 })
 
 export const metadata = {
@@ -20,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={outfit.variable}>
-      <body className="font-sans antialiased">
+    <html lang="en" className={`${jost.variable}`}>
+      <body className="font-jost antialiased">
         <div className="min-h-screen flex flex-col">
           <Header />
           <main className="min-h-[calc(100vh-4rem)] flex items-center justify-center py-12 px-4">
