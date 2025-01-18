@@ -11,8 +11,23 @@ const jost = Jost({
 })
 
 export const metadata = {
-  title: 'GastroClinic - Expert Gastroenterological Care',
+  title: 'GASTRO & LIVER CENTRE - Expert Gastroenterological Care',
   description: 'Professional gastroenterology services with compassionate care',
+  icons: {
+    icon: [
+      {
+        media: '(prefers-color-scheme: light)',
+        url: '/favicon.ico',
+        href: '/favicon.ico',
+      },
+      {
+        media: '(prefers-color-scheme: dark)',
+        url: '/favicon.svg',
+        href: '/favicon.svg',
+      }
+    ],
+    apple: '/apple-touch-icon.png',
+  },
 }
 
 export default function RootLayout({
