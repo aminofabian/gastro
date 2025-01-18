@@ -1,0 +1,13 @@
+@keyframes moveBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: 100px 100px; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+} 
